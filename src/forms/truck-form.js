@@ -6,9 +6,9 @@ export default function() {
   buttonOpenForm.className = 'buttonOpenForm';
   truckFormContainer.className = 'truckFormContainer';
 
-  buttonOpenForm.textContent = 'Add a track';
+  buttonOpenForm.textContent = 'Add a truck';
 
-  //toggle
+  // toggle
   // truckForm.style.display = 'none';
   //
   // buttonOpenForm.addEventListener("click", function() {
@@ -16,6 +16,12 @@ export default function() {
   // });
 
   truckForm.innerHTML =
+    '<label for="id">Id:</label>\n' +
+    '    <input id="id" required class="name">\n' +
+    '<br>' +
+    '<label for="model">Model:</label>\n' +
+    '    <input id="model" required class="name">\n' +
+    '<br>' +
     '<label for="licensePlate">License plate:</label>\n' +
     '    <input id="licensePlate" required class="license">\n' +
     '<br>' +
