@@ -39,11 +39,11 @@ const renderCostOfDeliveryForm = createRenderCostOfDeliveryForm();
 
 const shipForm = formBuilder(SHIPS_LIST_STORAGE_KEY, Ship, allShipFields, () => {
   renderShipsTable();
-  renderCostOfDeliveryForm();
+  renderCostOfDeliveryForm(renderCostOfDeliveryTable);
 });
 const truckForm = formBuilder(TRUCKS_LIST_STORAGE_KEY, Truck, allTruckFields, () => {
   renderTrucksTable();
-  renderCostOfDeliveryForm();
+  renderCostOfDeliveryForm(renderCostOfDeliveryTable);
 });
 
 renderCostOfDeliveryForm();

@@ -8,11 +8,12 @@ export default () => {
   const costOfDeliveryFormContainer = document.createElement('div');
   root.appendChild(costOfDeliveryFormContainer);
 
-  return () => {
+  return renderTable => {
     const costOfDeliveryForm = formBuilder(
       COSTS_OF_DELIVERY_STORAGE_KEY,
       CostDelivery,
       getCostOfDeliveryFields(),
+      renderTable,
     );
 
     costOfDeliveryFormContainer.innerHTML = '';
