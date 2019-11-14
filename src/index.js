@@ -17,7 +17,7 @@ import {
 
 const root = document.getElementById('root');
 
-let formsContainer = document.createElement('div');
+const formsContainer = document.createElement('div');
 formsContainer.className = 'formsContainer';
 root.appendChild(formsContainer);
 
@@ -38,6 +38,7 @@ const renderCostOfDeliveryTable = renderTable(
   costOfDeliveryTableCreator,
   COSTS_OF_DELIVERY_STORAGE_KEY,
 );
+const renderCostOfDeliveryForm = createRenderCostOfDeliveryForm();
 
 const shipForm = formBuilder(SHIPS_LIST_STORAGE_KEY, Ship, allShipFields, () => {
   renderShipsTable();
@@ -48,17 +49,9 @@ const truckForm = formBuilder(TRUCKS_LIST_STORAGE_KEY, Truck, allTruckFields, ()
   renderCostOfDeliveryForm(renderCostOfDeliveryTable);
 });
 
-// let formsContainer = document.querySelector('.formsContainer');
-
-// renderCostOfDeliveryForm();
-
-// let b = renderCostOfDeliveryForm();
-// console.log(b);
 formsContainer.appendChild(shipForm);
 formsContainer.appendChild(truckForm);
-const renderCostOfDeliveryForm = createRenderCostOfDeliveryForm();
 renderCostOfDeliveryForm();
-// formsContainer.appendChild(b);
 
 renderShipsTable();
 renderTrucksTable();

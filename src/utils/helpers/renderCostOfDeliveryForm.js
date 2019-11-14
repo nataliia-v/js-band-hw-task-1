@@ -7,7 +7,7 @@ export default () => {
   const costOfDeliveryFormContainer = document.createElement('div');
   costOfDeliveryFormContainer.className = 'costOfDeliveryContainer';
 
-  let formsContainer = document.querySelector('.formsContainer');
+  const formsContainer = document.querySelector('.formsContainer');
   formsContainer.appendChild(costOfDeliveryFormContainer);
 
   return renderTable => {
