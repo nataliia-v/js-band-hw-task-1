@@ -24,16 +24,26 @@
   }
 }
 
-.table {
-  width: 100%;
+caption {
+  border: 4px solid black;
+  background-color: aliceblue;
+  border-bottom: 0;
 }
 
-.td {
-  text-align: center;
-  border: 1px black solid;
+.table {
+  border: 4px solid black;
+  width: 100%;
+  margin-bottom: 50px;
 }
-.th {
-  border: 2px black solid;
+
+td {
+  text-align: center;
+  border-right: 2px solid black;
+  //border: 1px black solid;
+}
+th {
+  border-bottom: 2px solid black;
+  //background-color: green;
 }
 .formsContainer {
   display: flex;
@@ -44,4 +54,9 @@
 
 button {
   padding: 5px 10px;
+}
+
+.form-title {
+  text-align: center;
+  text-transform: capitalize;
 }
