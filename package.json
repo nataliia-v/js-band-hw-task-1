@@ -63,7 +63,8 @@
   "dependencies": {
     "development": "0.0.6",
     "normalize.css": "^8.0.0",
-    "npm": "^6.12.0"
+    "npm": "^6.12.0",
+    "uuid": "^3.3.3"
   },
   "husky": {
     "hooks": {

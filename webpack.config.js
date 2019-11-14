@@ -27,8 +27,8 @@ const common = merge([
     },
     plugins: [
       new HtmlWebpackPlugin({
-        filename: 'index.html',
-        chunks: ['index', 'common'],
+        filename: 'index.scss.scss.html',
+        chunks: ['index.scss.scss', 'common'],
         template: `${PATHS.source}/index.html`,
       }),
     ],

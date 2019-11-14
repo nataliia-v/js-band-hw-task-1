@@ -1,0 +1,32 @@
+.formRoot {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 20px;
+  text-align: right;
+}
+
+.fieldRoot {
+  margin: 5px 0;
+
+  input, select {
+    margin-left: 5px;
+    border: 1px solid black;
+    outline: none;
+
+    &:invalid:focus {
+      border: 1px solid red;
+    }
+
+    &:valid {
+      border: 1px solid green;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+}
+
+.td {
+  text-align: center;
+}
