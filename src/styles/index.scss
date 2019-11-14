@@ -3,6 +3,7 @@
   width: fit-content;
   padding: 20px;
   text-align: right;
+  background-color: lightgrey;
 }
 
 .fieldRoot {
@@ -29,4 +30,18 @@
 
 .td {
   text-align: center;
+  border: 1px black solid;
+}
+.th {
+  border: 2px black solid;
+}
+.formsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 5px 10px;
 }

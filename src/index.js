@@ -17,6 +17,10 @@ import {
 
 const root = document.getElementById('root');
 
+let formsContainer = document.createElement('div');
+formsContainer.className = 'formsContainer';
+root.appendChild(formsContainer);
+
 const allShipFields = [...commonFields, ...shipFields];
 const allTruckFields = [...commonFields, ...truckFields];
 const shipsTableColumns = ['id', ...allShipFields.map(field => field.name)];
@@ -35,8 +39,6 @@ const renderCostOfDeliveryTable = renderTable(
   COSTS_OF_DELIVERY_STORAGE_KEY,
 );
 
-const renderCostOfDeliveryForm = createRenderCostOfDeliveryForm();
-
 const shipForm = formBuilder(SHIPS_LIST_STORAGE_KEY, Ship, allShipFields, () => {
   renderShipsTable();
   renderCostOfDeliveryForm(renderCostOfDeliveryTable);
@@ -46,9 +48,17 @@ const truckForm = formBuilder(TRUCKS_LIST_STORAGE_KEY, Truck, allTruckFields, ()
   renderCostOfDeliveryForm(renderCostOfDeliveryTable);
 });
 
+// let formsContainer = document.querySelector('.formsContainer');
+
+// renderCostOfDeliveryForm();
+
+// let b = renderCostOfDeliveryForm();
+// console.log(b);
+formsContainer.appendChild(shipForm);
+formsContainer.appendChild(truckForm);
+const renderCostOfDeliveryForm = createRenderCostOfDeliveryForm();
 renderCostOfDeliveryForm();
-root.appendChild(shipForm);
-root.appendChild(truckForm);
+// formsContainer.appendChild(b);
 
 renderShipsTable();
 renderTrucksTable();

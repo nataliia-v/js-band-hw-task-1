@@ -4,9 +4,11 @@ import { COSTS_OF_DELIVERY_STORAGE_KEY } from '../constants';
 import CostDelivery from '../../models/CostDelivery';
 
 export default () => {
-  const root = document.getElementById('root');
   const costOfDeliveryFormContainer = document.createElement('div');
-  root.appendChild(costOfDeliveryFormContainer);
+  costOfDeliveryFormContainer.className = 'costOfDeliveryContainer';
+
+  let formsContainer = document.querySelector('.formsContainer');
+  formsContainer.appendChild(costOfDeliveryFormContainer);
 
   return renderTable => {
     const costOfDeliveryForm = formBuilder(

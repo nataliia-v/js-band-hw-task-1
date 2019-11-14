@@ -2,6 +2,7 @@ export default (tableCreator, dataId, tableContainerId) => {
   const root = document.getElementById('root');
   const tableContainer = document.createElement('div');
   tableContainer.id = tableContainerId;
+  console.log(tableContainer);
   root.appendChild(tableContainer);
 
   return () => {
