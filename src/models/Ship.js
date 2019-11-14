@@ -9,8 +9,7 @@ class Ship extends Transport {
   }
 
   showAverageSpeed() {
-    // eslint-disable-next-line no-alert
-    alert(`${this.averageSpeed}nm`);
+    console.log(`${this.averageSpeed}nm`);
   }
 }
 

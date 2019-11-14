@@ -16,7 +16,7 @@ export default (dataId, Model, fieldsConfig, onSubmit) => {
 
     Array.from(formFields).forEach(formField => {
       result[formField.name] = formField.value;
-      // eslint-disable-next-line no-param-reassign
+      // eslint-disable-next-line no-param-reassign7
       formField.value = '';
     });
 
@@ -29,11 +29,13 @@ export default (dataId, Model, fieldsConfig, onSubmit) => {
 
     if (onSubmit) onSubmit();
   });
+  const formName = document.createElement('h3');
+  formName.textContent = dataId;
+  // console.log(formName);
 
   fieldsConfig.forEach(({ name, type, options }) => {
     const fieldRoot = document.createElement('div');
     fieldRoot.classList.add('fieldRoot');
-
     const label = document.createElement('label');
 
     label.textContent = name;
@@ -71,7 +73,7 @@ export default (dataId, Model, fieldsConfig, onSubmit) => {
 
     input.classList.add('formField-js');
     input.required = true;
-
+    formRoot.appendChild(formName);
     label.appendChild(input);
     fieldRoot.appendChild(label);
     form.appendChild(fieldRoot);
